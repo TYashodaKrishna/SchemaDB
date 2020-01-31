@@ -1,1 +1,1 @@
-# SchemaDB
+Manages CRUD operations on Schema
