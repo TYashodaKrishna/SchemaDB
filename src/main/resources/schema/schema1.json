@@ -1,0 +1,17 @@
+{
+  "siteKey": "test-site",
+  "schema": [
+    {
+      "dataType": "longText",
+      "multiValue": "false",
+      "autoSuggest": "false",
+      "fieldName": "attribute_set_id"
+    },
+    {
+      "dataType": "longText",
+      "multiValue": "false",
+      "autoSuggest": "false",
+      "fieldName": "store_id"
+    }
+  ]
+}
