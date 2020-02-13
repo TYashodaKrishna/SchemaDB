@@ -4,7 +4,6 @@ import com.SchemaDB.exceptions.SchemaNotFoundException;
 import com.SchemaDB.exceptions.StoreException;
 import com.SchemaDB.model.SchemaModel;
 import com.SchemaDB.service.SchemaService;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,8 +20,8 @@ public class SchemaController {
     private SchemaService schemaService;
 
     @RequestMapping(value = "/monitor", method = RequestMethod.GET)
-    public @ResponseBody String monitor() {
-        return "Working fine";
+    public ResponseEntity monitor() {
+        return ResponseEntity.status(HttpStatus.OK).body("Working fine.");
     }
 
     @RequestMapping(value = "/{siteKey}/upload", method = RequestMethod.POST)
