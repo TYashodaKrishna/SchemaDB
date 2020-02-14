@@ -5,7 +5,6 @@ import com.SchemaDB.exceptions.SchemaNotFoundException;
 import com.SchemaDB.exceptions.StoreException;
 import com.SchemaDB.model.SchemaModel;
 import com.SchemaDB.service.SchemaService;
-import com.google.inject.Inject;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
@@ -15,7 +14,6 @@ public class SchemaServiceImpl implements SchemaService {
 
     private StoreDao storeDao;
 
-    @Inject
     public SchemaServiceImpl(StoreDao storeDao) {
         this.storeDao = storeDao;
     }

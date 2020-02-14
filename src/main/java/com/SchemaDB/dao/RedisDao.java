@@ -6,18 +6,16 @@ import com.SchemaDB.util.RedisStandAloneClient;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import redis.clients.jedis.Jedis;
 
 import java.io.IOException;
 
 @Slf4j
 public class RedisDao implements StoreDao {
+    @Autowired
     private RedisStandAloneClient redisClient;
     private static ObjectMapper MAPPER = new ObjectMapper();
-
-    public RedisDao() {
-        redisClient = new RedisStandAloneClient();
-    }
 
     @Override
     public Boolean isExists(String siteKey) {

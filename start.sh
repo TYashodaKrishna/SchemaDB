@@ -12,8 +12,6 @@ docker-compose up -d
 
 docker ps
 
-#npm install frisby --save-dev
-
-#npm install --save-dev jest
+sleep 60
 
 jest integration-test/test/schema.test.js
